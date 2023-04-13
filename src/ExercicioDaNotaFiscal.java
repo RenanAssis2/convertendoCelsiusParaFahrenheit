@@ -43,24 +43,34 @@ public class ExercicioDaNotaFiscal {
                 int valorReceber = operacao.nextInt();
                 saldoAtual = saldoAtual + valorReceber;
                 System.out.println("Saldo atualizado R$" + saldoAtual);
+                System.out.println("\n");
                 continue;
 
             }
             if (auxiliar == 3) {
                 System.out.println("Informe o valor para transferir:");
                 int valorTransferir = operacao.nextInt();
+                if (valorTransferir <= saldoAtual){
                 saldoAtual = saldoAtual - valorTransferir;
                 System.out.println("Saldo atualizado R$" + saldoAtual);
+                    System.out.println("\n");
+                } else {
+                    System.out.println("Saldo insuficiente");
+                    System.out.println("\n");
+                }
+
                 continue;
 
             }
             if (auxiliar == 4){
                 System.out.println("Sistema desligado, obrigado!");
+                System.out.println("\n");
                 break;
 
             }
             else{
                 System.out.println("Operação invalida");
+                System.out.println("\n");
                 continue;
             }
 
